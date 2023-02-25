@@ -52,3 +52,40 @@ for( let i=0; i<c1.length; i++){
 
 
 }
+//Query selector
+let h=document.querySelector('#main-header');
+h.style.borderBottom=" 7px solid red";
+let inp=document.querySelector('input');
+inp.placeholder="ENTER";
+let su=document.querySelector('input[type="submit"]');
+su.value="DO SUBMIT";
+let cl=document.querySelector('.list-group-item');
+cl.style.color="red";
+let lastitem=document.querySelector('.list-group-item:last-child');
+lastitem.style.color="blue";
+let seconditem=document.querySelector('.list-group-item:nth-child(2)');
+seconditem.style.color="yellow";
+//query selector all
+let ti=document.querySelectorAll('.title');
+console.log(ti);
+for( let i =0 ;i<ti.length;i++)
+{   
+    ti[i].style.backgroundColor="orange";
+}
+
+
+let c2=document.querySelectorAll('.list-group-item');
+console.log(c2);
+for( let i=0;i<c2.length;i++) {
+    if(i==1)
+    {
+        c2[i].style.color="green";
+    }
+    if(i%2!=0)
+    {
+        c2[i].style.backgroundColor="pink";
+    }
+    if(i%2==0){
+        c2[i].style.backgroundColor="gray";
+    }
+}
