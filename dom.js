@@ -33,7 +33,7 @@ for( let i=0; i<c.length; i++){
 
 }
 //get element by tag name
-/*let c1=document.getElementsByTagName('li');
+let c1=document.getElementsByTagName('li');
 console.log(c1)
 c1[1].textContent="SECOND";
 c1[1].style.fontWeight="bold";
@@ -46,6 +46,9 @@ for( let i=0; i<c1.length; i++){
     {
         c1[i].style.backgroundColor="green";
     }
-c1[i].style.backgroundColor="lightblue";
+    else{
+        c1[i].style.backgroundColor="lightblue";
+    }
 
-}*/
+
+}
