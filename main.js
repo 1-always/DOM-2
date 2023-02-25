@@ -17,6 +17,15 @@ function additem(e){
     var list1=document.createElement('li');
     list1.className='list-group-item';
     list1.appendChild(document.createTextNode(newitem1));
+    var newitem2 =document.getElementById('item2').value;
+
+    //create new element
+    var list2=document.createElement('li');
+    //var list3=document.createElement('li');
+
+    list2.className='list-group-item';
+    list2.appendChild(document.createTextNode(newitem2));
+    
     var del=document.createElement('button');
     //add calsses
     del.className="btn btn-danger btn-sm float-right delete";
@@ -25,8 +34,10 @@ function additem(e){
     var edit=document.createElement('button');
     edit.className="btn btn-danger btn-sm float-right"
     edit.appendChild(document.createTextNode('Edit'));
-
-    it.appendChild(list1);
+    let c=newitem1+newitem2
+    list2.textContent=c;
+    //it.appendChild(c);
+    it.appendChild(list2);
     list1.appendChild(del);
     list1.appendChild(edit);
 
