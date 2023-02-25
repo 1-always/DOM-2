@@ -1,6 +1,6 @@
 var f=document.getElementById('addForm');
 var it=document.getElementById('items');
-let fill=document.getElementById('filter');
+var fill=document.getElementById('filter');
 //let button=document.getElementById('')
 f.addEventListener('submit',additem);
 //add event listener to delete item 
@@ -48,7 +48,19 @@ function removeitem(e)
 function filteritem(e)
 {
     //convert text to lower case
-    let text = e.target.value.toLowerCase();
-    let items=it.getElementsByTagName('li');
+    var text = e.target.value.toLowerCase();
+    var items=it.getElementsByTagName('li');
+    Array.from(items).forEach(function(item){
+        var name=item.firstChild.textContent;
+        if(name.toLowerCase().indexOf(text)!=-1)
+        {
+            item.style.backgroundColor="grey";
+            item.style.display='block';
+
+        }
+        else{
+            item.style.display="none";
+        }
+    })
 
 }
