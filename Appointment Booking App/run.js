@@ -28,6 +28,7 @@ form.addEventListener('submit',onsubmit);
         list.appendChild(append);
         console.log(list)
         localStorage.setItem(name.value,email.value);
+        console.log(localStorage.getItem(name.value));
         sessionStorage.setItem(name.value,email.value);
         document.cookie= 'name=name.value','value=email.value';
         userlist.appendChild(list);
