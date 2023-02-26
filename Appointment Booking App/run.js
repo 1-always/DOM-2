@@ -27,7 +27,17 @@ form.addEventListener('submit',onsubmit);
         let append=document.createTextNode(name.value +"   "+ email.value);
         list.appendChild(append);
         console.log(list)
+        let obj={
+            name: name.value,
+            email: email.value
+        };
+    
+        console.log(localStorage);
         localStorage.setItem(name.value,email.value);
+        let myobj1=JSON.stringify(obj);
+        console.log("stringify"+ myobj1);
+        localStorage.setItem("myobj",myobj1);
+        console.log(localStorage);
         console.log(localStorage.getItem(name.value));
         sessionStorage.setItem(name.value,email.value);
         document.cookie= 'name=name.value','value=email.value';
